@@ -1,0 +1,25 @@
+a {
+	color: cadetblue;
+	text-decoration: none;
+	cursor: pointer;
+}
+p {
+	background-color: lightgrey;
+	border: 2px dashed red;
+	padding:  10px 20px 30px 40px;
+	margin: 30px;
+	font-family: 'Manrope', sans-serif;
+	font-size: 20px;
+}
+
+* {
+	border: 2px solid lightgrey;
+}
+
+.blue-bg {
+	background-color: aliceblue;
+}
+
+[autoplay] {
+	border-radius: 10px;
+}

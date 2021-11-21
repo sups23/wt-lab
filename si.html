@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <h2>Simple Interest</h2>
+    <p>
+        Principle :
+        <input type="number" name="" id="principle">
+    </p>
+    <p>
+        Rate :
+        <input type="number" name="" id="rate">
+    </p>
+    <p>
+        Time :
+        <input type="number" name="" id="time">
+    </p>
+
+    <p>
+        <input type="button" value="Calculate" onclick="calculate()">
+    </p>
+
+    <p>
+        Result :
+        <input type="number" name="" id="interest">
+    </p>
+
+
+    <script>
+        const p = Number(document.getElementById('principle').value)
+        const t = Number(document.getElementById('time').value)
+        const r = Number(document.getElementById('rate').value)
+
+        function calculate() {
+            console.log(p,t,r)
+            const result = (p*t*r)/100
+            console.log(result)
+            document.getElementById('interest').value = result
+        }
+    </script>
+</body>
+</html>

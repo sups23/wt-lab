@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .big-text {
+            font-size: 2rem;
+        }
+    </style>
+    <title>Inserting CSS - Inline, internal and external</title>
+</head>
+<body>
+    <p style="color: gray;">
+        Inline css is inserted using style attribute.<br>
+        Inline CSS syntax(inside tag's attribute) - 
+        <code>
+            property: value
+        </code>
+    </p>
+
+    <p class="big-text">
+        Big Text <br>
+        Internal CSS is specified in head tag inside style tag.
+        Internal CSS syntax = 
+        <code>
+            specifier {
+                property: value
+            }
+        </code>
+    </p>
+
+    <p class="big-light-text">
+        Big light text <br>
+        External CSS is specified in separate file and link to that file is added using link tag.
+        The syntax of CSS is same as internal CSS.
+    </p>
+</body>
+</html>
