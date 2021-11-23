@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Handling</title>
+  </head>
+  <body>
+    <div id="error" style="color: red"></div>
+    <form action="" id="form">
+      Number 1 <input type="number" name="n1" id="" /> Number 2
+      <input type="number" name="n2" id="" /> Result
+      <input type="number" name="result" id="" />
+      <input type="submit" value="divide" />
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+      const errDiv = document.getElementById("error");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const result = Number(form.n1.value) / Number(form.n2.value);
+
+        if (result == Infinity) {
+          errDiv.textContent = "Please enter non-zero number";
+        }
+      });
+    </script>
+  </body>
+</html>
