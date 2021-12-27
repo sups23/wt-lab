@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Utils</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        The window object is supported by all browsers. It represents the browser's window.
+        All global JavaScript objects, functions, and variables automatically become members of the window object.
+        Global variables are properties of the window object.
+        Global functions are methods of the window object.
+        Even the document object (of the HTML DOM) is a property of the window object: 
+        */
+        console.log(window)
+
+        // String
+        const text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        console.log("Text : " + text)
+        console.log("Length of string : " + text.length)
+        console.log("A part of text : " + text.slice(7, 13))
+        console.log("A part of text : " + text.substring(7, 13))
+        console.log("Replaced A with B : " + text.replace("A", "B"))
+        console.log("Lowercase text : " + text.toLowerCase())
+        console.log("Splitted text : " + text.split('m'))
+
+        // Number
+        const number = 3
+        const decimal = 3.44332323
+        console.log("Number : " + number)
+        console.log("Number to string : " + number.toString())
+        console.log("Number to exponential : " + number.toExponential(2))
+        console.log("Decimal fixed to 2 digits : " + decimal.toFixed(2))
+
+        // Date
+        console.log(new Date)
+
+    </script>
+</body>
+
+</html>

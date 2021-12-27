@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sum of two numbers (Jquery)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <input type="number" name="value1" id="v1" value="">
+  <input type="number" name="value2" id="v2" value="">
+  <input type="button" name="" id="btnSubmit" value="add">
+  <input type="number" name="result" id="result" value="">
+
+  <script>
+    $(document).ready(function () {
+      $("#btnSubmit").click(
+        function () {
+          $("#result").val(Number($("#v1").val()) + Number($("#v2").val()));
+        }
+      )
+    })
+  </script>
+</body>
+
+</html>
