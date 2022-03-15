@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+  </head>
+  <body>
+    <form id="form">
+      Username <input type="text" name="username" />
+
+      Password <input type="text" name="password" />
+
+      Email <input type="text" name="email" />
+
+      Male<input type="radio" name="gender" value="male" />
+
+      Female<input type="radio" name="gender" value="female" />
+
+      1<input type="checkbox" value="a" name="hobbies" id="" />
+
+      2<input type="checkbox" value="b" name="hobbies" id="" />
+
+      3<input type="checkbox" value="c" name="hobbies" id="" />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Require username
+        console.log(form.username.value);
+        if (form.username.value == "") {
+          alert("Username required");
+          form.username.focus();
+          return;
+        }
+        // Require password
+        if (form.password.value == "") {
+          alert("Password required");
+          form.password.focus();
+          return;
+        }
+
+        // Checking length of input
+        if (form.password.value.length < 5) {
+          alert("Weak password");
+          form.password.focus();
+          return;
+        }
+
+        // Require radio button to be selected
+        if (!form.querySelector("input[name=gender]:checked")) {
+          alert("Please select gender.");
+          return;
+        }
+
+        // Require atleast one checkbox to be selected
+        if (!form.querySelector("input[name=hobbies]:checked")) {
+          alert("Please select at least one hobby.");
+          return;
+        }
+
+        alert("submitted")
+      });
+    </script>
+  </body>
+</html>
